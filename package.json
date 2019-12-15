@@ -117,7 +117,8 @@
     "swagger-ui-express": "^4.0.2",
     "unzipper": "0.8.12",
     "winston": "^3.2.1",
-    "z85": "~0.0"
+    "z85": "~0.0",
+    "snyk": "^1.260.0"
   },
   "devDependencies": {
     "chai": "~4.2",
@@ -161,7 +162,9 @@
     "protractor": "npm run e2e",
     "e2e": "node test/e2eTests.js",
     "vagrant": "cd vagrant && vagrant up",
-    "package": "grunt package"
+    "package": "grunt package",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": "8 - 11"
@@ -215,5 +218,6 @@
       "config"
     ]
   },
-  "heroku-run-build-script": true
+  "heroku-run-build-script": true,
+  "snyk": true
 }
